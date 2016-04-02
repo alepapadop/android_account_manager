@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AccountManager</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_login">login</string>
+    <string name="title_activity_sign_in">SignIn</string>
     <string name="title_activity_sign_up">SignUp</string>
     <string name="title_activity_action">Action</string>
     <string name="title_activity_account_authenticator_impl">AccountAuthenticatorImpl</string>

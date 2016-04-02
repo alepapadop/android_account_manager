@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -26,7 +27,7 @@
         </activity>
         <activity
             android:name=".SignIn"
-            android:label="@string/title_activity_login"
+            android:label="@string/title_activity_sign_in"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SignUp"
@@ -38,7 +39,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <service
-            android:name=".AccountAuthenticatorService"
+            android:name=".AccountManager.AccountAuthenticatorService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -51,7 +52,7 @@
         </service>
 
         <activity
-            android:name=".AccountAuthenticatorActivity"
+            android:name=".AccountManager.AccountAuthenticatorActivity"
             android:label="@string/title_activity_account_authenticator"
             android:theme="@android:style/Theme.NoDisplay"></activity>
 </application>

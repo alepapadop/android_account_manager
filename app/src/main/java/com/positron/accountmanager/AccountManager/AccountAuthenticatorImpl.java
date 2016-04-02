@@ -1,4 +1,4 @@
-package com.positron.accountmanager;
+package com.positron.accountmanager.AccountManager;
 
 import android.accounts.AbstractAccountAuthenticator;
 import android.accounts.Account;
@@ -9,6 +9,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.positron.accountmanager.Constants;
 
 /**
  * Created by alepapadop on 3/26/16.
@@ -39,7 +41,7 @@ public class AccountAuthenticatorImpl extends AbstractAccountAuthenticator {
 
         intent.putExtra(AccountManager.KEY_ACCOUNT_AUTHENTICATOR_RESPONSE, response);
         intent.putExtra(Constants.ACCOUNT_AUTH_TOKEN_TYPE_KEY, authTokenType);
-        intent.putExtra(Constants.ACCOUNT_REQUEST_ORIGIN, Constants.ACCOUNT_REQUEST_ADD_ACCOUNT);
+        intent.putExtra(Constants.ACCOUNT_REQUEST_ORIGIN_KEY, Constants.ACCOUNT_REQUEST_ADD_ACCOUNT);
 
         Bundle bundle = new Bundle();
         bundle.putParcelable(AccountManager.KEY_INTENT, intent);
@@ -54,6 +56,7 @@ public class AccountAuthenticatorImpl extends AbstractAccountAuthenticator {
 
     @Override
     public Bundle getAuthToken(AccountAuthenticatorResponse response, Account account, String authTokenType, Bundle options) throws NetworkErrorException {
+        Log.d(Constants.ACCOUNT_LOG_TAG, "getAuthToken");
         return null;
     }
 

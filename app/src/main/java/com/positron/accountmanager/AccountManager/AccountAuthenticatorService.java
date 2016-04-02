@@ -1,4 +1,4 @@
-package com.positron.accountmanager;
+package com.positron.accountmanager.AccountManager;
 
 import android.app.Service;
 import android.content.Intent;

@@ -27,12 +27,12 @@ public class Action extends AppCompatActivity {
         });
     }
 
-    void sign_in() {
+    public void sign_in(View view) {
         Intent intent = new Intent(this, SignIn.class);
         startActivity(intent);
     }
 
-    void sign_up() {
+    public void sign_up(View view) {
         Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }

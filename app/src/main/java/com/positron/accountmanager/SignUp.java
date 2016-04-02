@@ -1,6 +1,8 @@
 package com.positron.accountmanager;
 
+import android.app.LoaderManager;
 import android.content.Intent;
+import android.content.Loader;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,7 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 
-public class SignUp extends AppCompatActivity {
+import com.positron.accountmanager.AccountManager.AccountAuthenticatorAsyncTaskData;
+
+public class SignUp extends AppCompatActivity implements LoaderManager.LoaderCallbacks<AccountAuthenticatorAsyncTaskData> {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,4 +58,18 @@ public class SignUp extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    public Loader<AccountAuthenticatorAsyncTaskData> onCreateLoader(int id, Bundle args) {
+        return null;
+    }
+
+    @Override
+    public void onLoadFinished(Loader<AccountAuthenticatorAsyncTaskData> loader, AccountAuthenticatorAsyncTaskData data) {
+
+    }
+
+    @Override
+    public void onLoaderReset(Loader<AccountAuthenticatorAsyncTaskData> loader) {
+
+    }
 }

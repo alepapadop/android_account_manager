@@ -1,9 +1,13 @@
-package com.positron.accountmanager;
+package com.positron.accountmanager.AccountManager;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.positron.accountmanager.Constants;
+import com.positron.accountmanager.SignIn;
+import com.positron.accountmanager.SignUp;
 
 
 public class AccountAuthenticatorActivity extends android.accounts.AccountAuthenticatorActivity {
@@ -65,7 +69,7 @@ public class AccountAuthenticatorActivity extends android.accounts.AccountAuthen
                 _password = data.getStringExtra(Constants.ACCOUNT_PASSWORD_KEY);
                 _auth_token = data.getStringExtra(Constants.ACCOUNT_AUTH_TOKEN_TYPE_KEY);
 
-                createAccount();
+                create_account();
             }
         } else if (requestCode == Constants.ACCOUNT_REQUEST_SIGN_UP) {
             if (resultCode == RESULT_OK) {
@@ -82,7 +86,7 @@ public class AccountAuthenticatorActivity extends android.accounts.AccountAuthen
         finish();
     }
 
-    private void createAccount() {
+    private void create_account() {
 
         final Account account = new Account(_username, _auth_token_type);
 
